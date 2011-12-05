@@ -1,0 +1,27 @@
+========================================================================
+User Information for the Fedora terminus-font-console package
+========================================================================
+
+The console package just dumps the font files in the directory where
+the other console fonts are and does not do any setting up (for now).
+
+ * The difference between all those ter-????.psf.gz files is
+   explained in the file
+
+      /lib/kbd/consolefonts/README.terminus
+
+ * You can manually change the font for the Linux VGA textmode or
+   framebuffer console by running something like
+
+      /bin/setfont /lib/kbd/consolefonts/ter-u16b.psf.gz
+
+   Note that using a font of a different font size will change the
+   $COLUMNS and $LINES of the terminal together with the changed
+   font size.
+
+ * To make the above setting permanent, adapt the file
+
+      /etc/sysconfig/i18n
+
+   to set SYSFONT="ter-u16b".
+
